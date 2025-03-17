@@ -1,5 +1,3 @@
-import React from "react";
-
 const TrendingProduct = () => {
   return (
     <div className="trending__product">

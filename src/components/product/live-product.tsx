@@ -1,5 +1,3 @@
-import React from "react";
-
 const LiveProduct = () => {
   return (
     <div className="live__product">

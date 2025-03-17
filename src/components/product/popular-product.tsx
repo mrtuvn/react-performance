@@ -1,5 +1,3 @@
-import React from "react";
-
 const PopularProduct = () => {
   return (
     <div className="popular__product">

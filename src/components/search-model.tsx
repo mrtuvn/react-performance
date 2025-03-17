@@ -1,5 +1,3 @@
-import React from "react";
-
 const SearchModel = () => {
   return (
     <div className="search-model">
