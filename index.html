@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <meta name="description" content="Free Web tutorials" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="John Doe" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Performance Demo</title>
+  </head>
+  <body>
+    <noscript id="deferred-styles">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+      />
+
+      <link
+        rel="stylesheet"
+        href="assets/css/bootstrap.min.css"
+        type="text/css"
+      />
+      <link
+        rel="stylesheet"
+        href="/assets/css/font-awesome.min.css"
+        type="text/css"
+      />
+      <link
+        rel="stylesheet"
+        href="/assets/css/elegant-icons.css"
+        type="text/css"
+      />
+      <link rel="stylesheet" href="/assets/css/plyr.css" type="text/css" />
+      <link
+        rel="stylesheet"
+        href="/assets/css/nice-select.css"
+        type="text/css"
+      />
+      <link
+        rel="stylesheet"
+        href="/assets/css/owl.carousel.min.css"
+        type="text/css"
+      />
+      <link
+        rel="stylesheet"
+        href="/assets/css/slicknav.min.css"
+        type="text/css"
+      />
+      <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+    </noscript>
+    <script type="text/javascript">
+      const loadedDeferredStyles = function () {
+        const addStylesNode = document.getElementById("deferred-styles");
+        const replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.head.appendChild(replacement);
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      const raf =
+        requestAnimationFrame ||
+        mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame;
+
+      if (raf) {
+        raf(function () {
+          window.setTimeout(loadedDeferredStyles, 0);
+        });
+      } else {
+        window.addEventListener("load", loadedDeferredStyles);
+      }
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- test defer js -->
+    <!-- <script type="text/javascript" src="/assets/js/index.js" defer></script> -->
+
+    <script type="text/javascript">
+      let jqueryElm = document.createElement("script");
+      let bootstrapElm = document.createElement("script");
+      let niceSelectElm = document.createElement("script");
+      let slicknavElm = document.createElement("script");
+      let owlCarouselElm = document.createElement("script");
+      let mainElm = document.createElement("script");
+      let plyrElm = document.createElement("script");
+      let mixitupElm = document.createElement("script");
+
+      document.body.appendChild(jqueryElm);
+      jqueryElm.type = "text/javascript";
+      jqueryElm.src = "/assets/js/jquery-3.3.1.min.js";
+
+      jqueryElm.onload = function () {
+        document.body.appendChild(bootstrapElm);
+        bootstrapElm.type = "text/javascript";
+        bootstrapElm.src = "/assets/js/bootstrap.min.js";
+
+        document.body.appendChild(niceSelectElm);
+        niceSelectElm.type = "text/javascript";
+        niceSelectElm.src = "/assets/js/jquery.nice-select.min.js";
+
+        document.body.appendChild(slicknavElm);
+        slicknavElm.type = "text/javascript";
+        slicknavElm.src = "/assets/js/jquery.slicknav.js";
+
+        document.body.appendChild(owlCarouselElm);
+        owlCarouselElm.type = "text/javascript";
+        owlCarouselElm.src = "/assets/js/owl.carousel.min.js";
+
+        document.body.appendChild(plyrElm);
+        plyrElm.type = "text/javascript";
+        plyrElm.src = "/assets/js/player.js";
+
+        document.body.appendChild(mixitupElm);
+        mixitupElm.type = "text/javascript";
+        mixitupElm.src = "/assets/js/mixitup.min.js";
+
+        document.body.appendChild(mainElm);
+        mainElm.type = "text/javascript";
+        mainElm.src = "/assets/js/main.js";
+      };
+    </script>
+  </body>
+</html>
