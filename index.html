@@ -98,31 +98,48 @@
       jqueryElm.onload = function () {
         document.body.appendChild(bootstrapElm);
         bootstrapElm.type = "text/javascript";
+        bootstrapElm.async = true;
+        bootstrapElm.defer = true;
         bootstrapElm.src = "/assets/js/bootstrap.min.js";
 
         document.body.appendChild(niceSelectElm);
         niceSelectElm.type = "text/javascript";
+        niceSelectElm.async = true;
+        niceSelectElm.defer = true;
         niceSelectElm.src = "/assets/js/jquery.nice-select.min.js";
 
         document.body.appendChild(slicknavElm);
         slicknavElm.type = "text/javascript";
+        slicknavElm.async = true;
+        slicknavElm.defer = true;
         slicknavElm.src = "/assets/js/jquery.slicknav.js";
 
         document.body.appendChild(owlCarouselElm);
         owlCarouselElm.type = "text/javascript";
+        owlCarouselElm.async = true;
+        owlCarouselElm.defer = true;
         owlCarouselElm.src = "/assets/js/owl.carousel.min.js";
 
         document.body.appendChild(plyrElm);
         plyrElm.type = "text/javascript";
+        plyrElm.async = true;
+        plyrElm.defer = true;
         plyrElm.src = "/assets/js/player.js";
 
         document.body.appendChild(mixitupElm);
         mixitupElm.type = "text/javascript";
+        mixitupElm.async = true;
+        mixitupElm.defer = true;
         mixitupElm.src = "/assets/js/mixitup.min.js";
 
         document.body.appendChild(mainElm);
         mainElm.type = "text/javascript";
         mainElm.src = "/assets/js/main.js";
+        mainElm.async = false;
+        mainElm.defer = false;
+        mainElm.onload = function () {
+          console.log("mainElm ready");
+        };
       };
     </script>
   </body>
